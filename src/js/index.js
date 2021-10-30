@@ -3,7 +3,7 @@ import countryForm from './templates/form.hbs';
 import countryList from './templates/list.hbs';
 import fetchCountries from './fetchCountries';
 import '@pnotify/core/dist/BrightTheme.css';
-import { debounce } from 'lodash';
+// import { debounce } from 'lodash';
 import { error, Stack } from '@pnotify/core';
 
 
@@ -15,7 +15,7 @@ const refs = {
     outputCountry: document.querySelector('.box-country'),
   }
 
-refs.inputContry.addEventListener('input', debounce(onInput, 500));
+refs.inputContry.addEventListener('input', onInput, 500);
 
 function onInput() {
   if (!refs.inputContry.value) return markupOutput(0);
