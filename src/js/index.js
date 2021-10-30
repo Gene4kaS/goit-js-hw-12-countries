@@ -42,26 +42,26 @@ fetchCountries(refs.inputContry.value).then(data => {
     return;
   }
 
-  function errorMessage(message) {
-    const myStack = new Stack({
-      dir1: 'right',
-      firstpos1: 25,
-      push: 'top',
-      modal: true,
-    });
+  // function errorMessage(message) {
+  //   const myStack = new Stack({
+  //     dir1: 'right',
+  //     firstpos1: 25,
+  //     push: 'top',
+  //     modal: true,
+  //   });
 
-    return error({
-      text: message,
-      delay: 3000,
-      closer: false,
-      stack: myStack,
-      title: 'ERROR!',
-      icon: false,
-      width: '250px',
-      sticker: false,
-      addClass: 'error-box',
-    });
-  }
+  //   return error({
+  //     text: message,
+  //     delay: 3000,
+  //     closer: false,
+  //     stack: myStack,
+  //     title: 'ERROR!',
+  //     icon: false,
+  //     width: '250px',
+  //     sticker: false,
+  //     addClass: 'error-box',
+  //   });
+  // }
 }
 
 
