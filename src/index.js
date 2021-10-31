@@ -1,7 +1,7 @@
 // import './css/common.css';
-import countryForm from './templates/form.hbs';
+import countryForm from "./templates/form.hbs";
 import countryList from './templates/list.hbs';
-import fetchCountries from './fetchCountries';
+import fetchCountries from './js/fetchCountries';
 import '@pnotify/core/dist/BrightTheme.css';
 // import { debounce } from 'lodash';
 import { error, Stack } from '@pnotify/core';
