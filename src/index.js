@@ -34,7 +34,7 @@ fetchCountries(refs.inputContry.value)
       markupOutput(countryForm(data[0]));
     }
     return;
-  }).catch(error);
+  }).catch(error => alert(error));
 
   function markupOutput(markup) {
     refs.outputCountry.innerHTML = '';
