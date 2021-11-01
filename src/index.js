@@ -16,9 +16,11 @@ const refs = {
 refs.inputContry.addEventListener('input', debounce(onInput, 500));
 
 function onInput() {
-  if (!refs.inputContry.value) return markupOutput(0);
+  if (!refs.inputContry.value) 
+  return markupOutput(0);
 
-fetchCountries(refs.inputContry.value).then(data => {
+fetchCountries(refs.inputContry.value)
+  .then(data => {
     if (!data.length) {
       markupOutput(0);
       return errorMessage('There is no such country. Refine your request.');
@@ -32,7 +34,7 @@ fetchCountries(refs.inputContry.value).then(data => {
       markupOutput(countryForm(data[0]));
     }
     return;
-  });
+  }).catch(error);
 
   function markupOutput(markup) {
     refs.outputCountry.innerHTML = '';
@@ -50,7 +52,7 @@ fetchCountries(refs.inputContry.value).then(data => {
 
     return error({
       text: message,
-      delay: 3000,
+      delay: 1000,
       closer: false,
       stack: myStack,
       title: 'ERROR!',
@@ -60,6 +62,7 @@ fetchCountries(refs.inputContry.value).then(data => {
       addClass: 'error-box',
     });
   }
+
 }
 
 
